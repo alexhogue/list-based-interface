@@ -1,0 +1,28 @@
+.vaultItemContainer{
+    background-color: white;
+    border-radius: 20px;
+    margin-bottom: 4%;
+}
+
+.vaultItem{
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+    
+}
+
+#savedText{
+    color: #5D5D5D;
+    min-width: 175px;
+}
+
+
+#x{
+    width:10%;
+}
+#x:hover{
+
+}

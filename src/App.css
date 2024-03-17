@@ -1,38 +1,55 @@
+@font-face {
+  font-family: 'Quadraat'; 
+  src: url('typefaces/FF Quadraat Sans Mono Pro.otf'); 
+}
+
+
 .App {
-  text-align: center;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+  font-family: 'Quadraat';
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(6px + 2vmin);
+  font-family: 'Quadraat';
+  margin-left: 5%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.travelContent{
+  display: flex;
+}
+
+.destinationList{
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  gap: 3%;
+  margin-left: 4%;
+  margin-right: 4%;
+  margin-bottom: 6%;
+}
+
+#vaultContainer{
+  width: 30%;
+  background-color: #5D5D5D;
+  border-radius: 0 25px 0 0;
+}
+.vault{
+  margin-left: 20%;
+  margin-right: 10%;
+}
+#emptyText{
+  color: white;
+}
+#vaultHeader{
+  margin-top: 10%;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

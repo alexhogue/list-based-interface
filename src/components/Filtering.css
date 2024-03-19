@@ -1,0 +1,10 @@
+select {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+}
+select:hover{
+    color: #E7436D;
+    text-decoration: underline;
+}
+

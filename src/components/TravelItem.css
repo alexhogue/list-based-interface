@@ -12,13 +12,16 @@
   padding: 10px;
 }
 
-#tripText{
+#buttonSection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-
 #vaultButton{
     max-height: 40px;
     min-height: 40px;
     max-width: 125px;
+    min-width: 115px;
     border-radius: 16px;
     background-color: #5D5D5D;
     color: white;
@@ -27,4 +30,20 @@
 #vaultButton:hover{
     background-color: #E7436D;
     transition: 0.3s;
+}
+#socialSection{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#heart{
+    width: 17%;
+    height: fit-content;
+}
+#comment{
+    width: 15%;
+    height: fit-content;
+}
+.socialData{
+    font-size: 13px;
 }

@@ -4,6 +4,8 @@
     "description": "Tasty desserts, renowned of museums, and iconic sites",
     "continent": "Europe",
     "classification": "city",
+    "likes": 3.8,
+    "comments": 783,
     "image": "images/anika.png"
   },
   {
@@ -11,6 +13,8 @@
     "description": "Bustling city, vibrant nightlife, and innovative technology",
     "continent": "Asia",
     "classification": "city",
+    "likes": 4.7,
+    "comments": 675,
     "image": "images/aubrey.png"
   },
   {
@@ -18,6 +22,8 @@
     "description": "Rich cultural heritage, traditional cuisine, and colorful markets",
     "continent": "North America",
     "classification": "beach",
+    "likes": 4.2,
+    "comments": 401,
     "image": "images/connie.png"
   },
   {
@@ -25,6 +31,8 @@
     "description": "Renaissance art, historic landmarks, and Tuscan cuisine",
     "continent": "Europe",
     "classification": "city",
+    "likes": 4.4,
+    "comments": 297,
     "image": "images/dylan.png"
   },
   {
@@ -32,6 +40,8 @@
     "description": "Spectacular wildlife, vast landscapes, and thrilling safaris",
     "continent": "Africa",
     "classification": "adventure",
+    "likes": 4.4,
+    "comments": 102,
     "image": "images/isaac.png"
   },
   {
@@ -39,6 +49,8 @@
     "description": "Iconic landmarks, bustling city life, and rich history",
     "continent": "Europe",
     "classification": "city",
+    "likes": 4.3,
+    "comments": 983,
     "image": "images/jeff.png"
   },
   {
@@ -46,6 +58,8 @@
     "description": "Breathtaking beaches, iconic landmarks, and laid-back culture",
     "continent": "Australia",
     "classification": "city, beach",
+    "likes": 4.3,
+    "comments": 412,
     "image": "images/jenny.png"
   },
   {
@@ -53,6 +67,8 @@
     "description": "Stunning beaches, natural beauty, and vibrant nightlife",
     "continent": "Asia",
     "classification": "beach, adventure",
+    "likes": 4.1,
+    "comments": 176,
     "image": "images/jessie.png"
   },
   {
@@ -60,6 +76,8 @@
     "description": "Carnival festivities, lush landscapes, and vibrant street art",
     "continent": "South America",
     "classification": "city, beach",
+    "likes": 4.0,
+    "comments": 398,
     "image": "images/kelly.png"
   },
   {
@@ -67,6 +85,8 @@
     "description": "Majestic palaces, bustling souks, and vibrant colors",
     "continent": "Africa",
     "classification": "city",
+    "likes": 3.9,
+    "comments": 274,
     "image": "images/lauren.png"
   },
   {
@@ -74,20 +94,26 @@
     "description": "Iconic skyscrapers, bustling streets, and diverse culture",
     "continent": "North America",
     "classification": "city",
+    "likes": 3.8,
+    "comments": 786,
     "image": "images/melissa.png"
   },
   {
     "name": "Crete, Greece",
-    "description": "A toasted bagel with sesame seeds, poppy seeds, and dried onion",
+    "description": "Ancient ruins, crystal-clear waters, and charming villages",
     "continent": "Europe",
     "classification": "beach",
+    "likes": 3.6,
+    "comments": 123,
     "image": "images/miku.png"
   },
   {
     "name": "Grand Canyon, USA",
-    "description": "Ancient ruins, crystal-clear waters, and charming villages",
+    "description": "Majestic cliffs, winding trails, and breathtaking vistas",
     "continent": "North America",
     "classification": "adventure",
+    "likes": 3.2,
+    "comments": 421,
     "image": "images/nick.png"
   },
   {
@@ -95,6 +121,8 @@
     "description": "Rugged landscape, breathtaking waterfalls, and Northern Lights sightings",
     "continent": "Europe",
     "classification": "adventure",
+    "likes": 4.2,
+    "comments": 340,
     "image": "images/sunny.png"
   },
   {
@@ -102,6 +130,8 @@
     "description": "Ancient ruins, breathtaking views, and rich Incan heritage",
     "continent": "South America",
     "classification": "adventure",
+    "likes": 4.5,
+    "comments": 132,
     "image": "images/tongyu.png"
   }
 ]

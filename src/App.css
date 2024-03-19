@@ -1,22 +1,45 @@
 @font-face {
-  font-family: 'Quadraat'; 
+  font-family: 'Quadraat Mono'; 
   src: url('typefaces/FF Quadraat Sans Mono Pro.otf'); 
 }
-
-
-.App {
-  
+@font-face {
+  font-family: 'Quadraat Light'; 
+  src: url('typefaces/FF Quadraat Sans Pro Light.otf'); 
+}
+@font-face {
+  font-family: 'Good Sans Reg'; 
+  src: url('typefaces/GoodSans-Regular.otf'); 
+}
+@font-face {
+  font-family: 'Good Sans Light'; 
+  src: url('typefaces/GoodSans-Light.otf'); 
 }
 
+
 h2 {
-  font-family: 'Quadraat';
+  font-family: 'Quadraat Mono';
+  font-size: 28px;
+}
+h3 {
+  font-family: 'Quadraat Light';
+  font-size: 20px;
+}
+p {
+  font-family: 'Good Sans Light';
+  font-size: 16px;
+}
+button {
+  font-family: 'Good Sans Reg';
+}
+select {
+  font-family: 'Good Sans Light';
 }
 
 
 .App-header {
   display: flex;
   font-size: calc(6px + 2vmin);
-  font-family: 'Quadraat';
+  font-family: 'Quadraat Mono';
   margin-left: 5%;
   margin-top: 2%;
   margin-bottom: 2%;
@@ -26,19 +49,54 @@ h2 {
   display: flex;
 }
 
+.destinationArea{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+#sortingBar{
+  display: flex;
+  gap: 10%;
+  margin-top: 1%;
+  margin-bottom: 3%;
+}
+.sortText{
+  text-wrap: nowrap;
+}
+#filter, #sort{
+  display: flex;
+  align-items: center;
+  gap: 5%;
+}
+#filterSection{
+  display: flex;
+  gap: 5%;
+}
+.filterButton{
+  background-color: transparent;
+  border: none;
+  text-wrap: nowrap;
+  font-size: 16px;
+}
+.filterButton:hover{
+  color: #E7436D;
+  text-decoration: underline;
+  background-color: transparent;
+  border: none;
+}
 .destinationList{
   display: flex;
   flex-wrap: wrap;
-  width: 70%;
   gap: 3%;
-  margin-left: 4%;
-  margin-right: 4%;
   margin-bottom: 6%;
 }
 
 #vaultContainer{
   width: 30%;
   background-color: #5D5D5D;
+  min-height: 715px;
   border-radius: 0 25px 0 0;
 }
 .vault{

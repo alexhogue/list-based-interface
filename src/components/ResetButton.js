@@ -1,14 +1,14 @@
 import React from "react";
+import "./Filtering.css";
 
 function Reset({ handleSelect }) {
-  const handleChange = (e) => {
-    const resetPage = e.target.value;
-    handleSelect(resetPage);
+  const handleClick = () => {
+    handleSelect();
   };
 
   return (
     <div>
-      <button onChange={handleChange} id="resetButton">
+      <button onClick={handleClick} id="resetButton">
         Reset Page
       </button>
     </div>

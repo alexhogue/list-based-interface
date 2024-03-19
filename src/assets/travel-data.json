@@ -1,6 +1,7 @@
 [
   {
     "name": "Paris, France",
+    "id": 0,
     "description": "Tasty desserts, renowned of museums, and iconic sites",
     "continent": "Europe",
     "classification": "city",
@@ -10,6 +11,7 @@
   },
   {
     "name": "Toyko, Japan",
+    "id": 1,
     "description": "Bustling city, vibrant nightlife, and innovative technology",
     "continent": "Asia",
     "classification": "city",
@@ -19,6 +21,7 @@
   },
   {
     "name": "Oaxaca, Mexico",
+    "id": 2,
     "description": "Rich cultural heritage, traditional cuisine, and colorful markets",
     "continent": "North America",
     "classification": "beach",
@@ -28,6 +31,7 @@
   },
   {
     "name": "Florence, Italy",
+    "id": 3,
     "description": "Renaissance art, historic landmarks, and Tuscan cuisine",
     "continent": "Europe",
     "classification": "city",
@@ -37,15 +41,17 @@
   },
   {
     "name": "Kruger National Park, South Africa",
+    "id": 4,
     "description": "Spectacular wildlife, vast landscapes, and thrilling safaris",
     "continent": "Africa",
     "classification": "adventure",
-    "likes": 4.4,
+    "likes": 4.1,
     "comments": 102,
     "image": "images/isaac.png"
   },
   {
     "name": "London, England",
+    "id": 5,
     "description": "Iconic landmarks, bustling city life, and rich history",
     "continent": "Europe",
     "classification": "city",
@@ -55,42 +61,47 @@
   },
   {
     "name": "Sydney, Australia",
+    "id": 6,
     "description": "Breathtaking beaches, iconic landmarks, and laid-back culture",
     "continent": "Australia",
-    "classification": "city, beach",
+    "classification": "city & beach",
     "likes": 4.3,
     "comments": 412,
     "image": "images/jenny.png"
   },
   {
     "name": "Phuket, Thailand",
+    "id": 7,
     "description": "Stunning beaches, natural beauty, and vibrant nightlife",
     "continent": "Asia",
-    "classification": "beach, adventure",
+    "classification": "beach & adventure",
     "likes": 4.1,
     "comments": 176,
     "image": "images/jessie.png"
   },
   {
     "name": "Rio de Janeiro, Brazil",
+    "id": 8,
     "description": "Carnival festivities, lush landscapes, and vibrant street art",
     "continent": "South America",
-    "classification": "city, beach",
+    "classification": "city & beach",
     "likes": 4.0,
     "comments": 398,
     "image": "images/kelly.png"
   },
   {
     "name": "Marrakech, Morocco",
+    "id": 9,
     "description": "Majestic palaces, bustling souks, and vibrant colors",
     "continent": "Africa",
     "classification": "city",
-    "likes": 3.9,
+    "likes": 3.8,
     "comments": 274,
     "image": "images/lauren.png"
   },
   {
     "name": "New York City, USA",
+    "id": 10,
     "description": "Iconic skyscrapers, bustling streets, and diverse culture",
     "continent": "North America",
     "classification": "city",
@@ -100,6 +111,7 @@
   },
   {
     "name": "Crete, Greece",
+    "id": 11,
     "description": "Ancient ruins, crystal-clear waters, and charming villages",
     "continent": "Europe",
     "classification": "beach",
@@ -109,15 +121,17 @@
   },
   {
     "name": "Grand Canyon, USA",
+    "id": 12,
     "description": "Majestic cliffs, winding trails, and breathtaking vistas",
     "continent": "North America",
     "classification": "adventure",
-    "likes": 3.2,
+    "likes": 3.7,
     "comments": 421,
     "image": "images/nick.png"
   },
   {
     "name": "Iceland",
+    "id": 13,
     "description": "Rugged landscape, breathtaking waterfalls, and Northern Lights sightings",
     "continent": "Europe",
     "classification": "adventure",
@@ -127,6 +141,7 @@
   },
   {
     "name": "Machu Picchu, Peru",
+    "id": 14,
     "description": "Ancient ruins, breathtaking views, and rich Incan heritage",
     "continent": "South America",
     "classification": "adventure",

@@ -97,6 +97,7 @@ select {
   width: 30%;
   background-color: #5D5D5D;
   min-height: 715px;
+  min-width: 200px;
   border-radius: 0 25px 0 0;
 }
 .vault{

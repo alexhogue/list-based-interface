@@ -3,8 +3,16 @@ select {
     border: none;
     font-size: 16px;
 }
-select:hover{
+#resetButton, #sortButton{
+    background-color: transparent;
+    border: none;
+    text-wrap: nowrap;
+    font-size: 16px;
+}
+select:hover, #resetButton:hover, #sortButton:hover{
     color: #E7436D;
     text-decoration: underline;
+    transition: 0.2s;
 }
+
 

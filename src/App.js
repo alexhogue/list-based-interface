@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import travelData from "./assets/travel-data.json";
 import TravelItem from "./components/TravelItem";
 import VaultItem from "./components/VaultItem";
+import Reset from "./components/ResetButton";
+import Sort from "./components/SortButton";
 import ContinentDropdown from "./components/ContinentDropdown";
 import ActivityDropdown from "./components/ActivityDropdown";
 
@@ -13,7 +15,7 @@ function App() {
   const [selectedContinent, setSelectedContinent] = useState("");
   const [activities, setActivities] = useState([]);
   const [selectedActivity, setSelectedActivity] = useState("");
-  const [isReset, setIsReset] = useState(false);
+  const [isSorted, setIsSorted] = useState(false);
   
 
   const loadData = () => {
@@ -58,11 +60,19 @@ function App() {
     setSelectedActivity(activity);
   }
 
-  const handleReset = () => {
-    setIsReset(true);
-  };
+  const sortHandler = () => {
+    setIsSorted(true)
+  }
+
+  useEffect(() => {
+  }, [isSorted]);
 
   const buildElements = () => {
+    let sortedData = data;
+    if (isSorted) {
+      const sortedData = travelData.sort((a,b) => b.likes - a.likes);
+      setIsSorted(false);
+    }
     let continentData = data;
     if (selectedContinent && !selectedActivity) {
       const continentData = travelData.filter(
@@ -109,6 +119,9 @@ function App() {
           addToVault={addToVault}
         />
       ));
+      if (itemList.length === 0) {
+        return <p>Selections do not match any travel options</p>
+      }
       return itemList;
     }
     else {
@@ -122,7 +135,6 @@ function App() {
       ));
       return itemList;
     }
-    
   };
 
 
@@ -139,6 +151,15 @@ function App() {
       ));
       return itemList;
     }
+  };
+
+  const resetPage = () => {
+    setSelectedActivity("");
+    setSelectedContinent("");
+    setVault([]);
+    setData(travelData);
+    let unSortedData = data;
+    unSortedData = travelData.sort((a, b) => a.id - b.id);
   };
 
 
@@ -158,7 +179,7 @@ function App() {
           <div id="sortingBar">
             <div id="sort">
               <p className="sortText">Sort by:</p>
-              <button className="filterButton">Most Liked</button>
+              <Sort handleSelect={sortHandler} />
             </div>
             <div id="filter">
               <p className="sortText">Filter by:</p>
@@ -173,6 +194,7 @@ function App() {
                   activities={activities}
                   handleSelect={handleSelectedActivity}
                 />
+                <Reset handleSelect={resetPage} />
               </div>
             </div>
           </div>

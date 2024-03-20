@@ -11,6 +11,7 @@ import ActivityDropdown from "./components/ActivityDropdown";
 function App() {
   const [data, setData] = useState(travelData);
   const [vault, setVault] = useState([]);
+  const [count, setCount] = useState(0);
   const [continents, setContinents] = useState([]);
   const [selectedContinent, setSelectedContinent] = useState("");
   const [activities, setActivities] = useState([]);
@@ -21,6 +22,10 @@ function App() {
   const loadData = () => {
     setData(travelData);
   };
+
+  const increaseCount = () => {
+    setCount(count ++);
+  }
 
   useEffect(() => {
     loadData();
@@ -45,11 +50,13 @@ function App() {
   const addToVault = (name) => {
     if (!vault.includes(name)) {
       setVault((prev_vault) => [...prev_vault, name]);
+      setCount(count + 1);
     }
   };
 
   const removeFromVault = (name) => {
     setVault((prev_vault) => prev_vault.filter((item) => item !== name));
+    setCount(count - 1);
   };
 
   const handleSelectedContinent = (continent) => {
@@ -120,7 +127,7 @@ function App() {
         />
       ));
       if (itemList.length === 0) {
-        return <p>Selections do not match any travel options</p>
+        return <p>Filters do not match any travel options</p>
       }
       return itemList;
     }
@@ -172,6 +179,15 @@ function App() {
         <div id="vaultContainer">
           <div className="vault">
             <h2 id="vaultHeader">My Vault</h2>
+            <p id="countUpdater">
+              {count > 0 ? (
+                <p>
+                  <b>{count}</b> voyages in your vault!
+                </p>
+              ) : (
+                " "
+              )}
+            </p>
             {displayVault()}
           </div>
         </div>

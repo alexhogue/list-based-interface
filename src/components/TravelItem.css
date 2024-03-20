@@ -53,3 +53,30 @@
 .socialData{
     font-size: 13px;
 }
+
+@keyframes fadeKeyframe {
+  from{
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  to {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+.fadeanime {
+    animation: fadeKeyframe 300ms ease-in;
+}
+@keyframes fadeKeyframeOut {
+  to{
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  from {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+.fadeOut {
+    animation: fadeKeyframeOut 300ms ease-out;
+}

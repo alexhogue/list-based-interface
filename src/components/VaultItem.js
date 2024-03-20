@@ -2,7 +2,7 @@ import React from "react";
 import x from "../assets/xButton.png";
 import "./VaultItem.css";
 
-function VaultItem({ item, name, index, removeFromVault }) {
+function VaultItem({ name, index, removeFromVault }) {
   return (
     <div className="vaultItemContainer">
       <div className="vaultItem">

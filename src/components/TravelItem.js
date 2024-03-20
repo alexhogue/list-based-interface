@@ -36,6 +36,7 @@ function TravelItem({ item, addToVault }) {
               id="heart"
               alt="like button"
               onClick={likeHander}
+              className={isLiked ? "fadeanime" : "fadeOut"}
               src={isLiked ? HeartFilled : Heart}
             />
             <p className="socialData">{item.likes}</p>

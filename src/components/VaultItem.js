@@ -1,8 +1,10 @@
 import React from "react";
 import x from "../assets/xButton.png";
+import { useState } from "react";
 import "./VaultItem.css";
 
 function VaultItem({ name, index, removeFromVault }) {
+
   return (
     <div className="vaultItemContainer">
       <div className="vaultItem">
@@ -17,6 +19,7 @@ function VaultItem({ name, index, removeFromVault }) {
           src={x}
           onClick={(e) => {
             removeFromVault(name);
+
           }}
         />
       </div>

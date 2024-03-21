@@ -17,15 +17,17 @@ function App() {
   const [activities, setActivities] = useState([]);
   const [selectedActivity, setSelectedActivity] = useState("");
   const [isSorted, setIsSorted] = useState(false);
+  const [isRemoved, setIsRemoved] = useState(false);
+  const [isReset, setIsReset] = useState(false);
   
 
   const loadData = () => {
     setData(travelData);
   };
 
-  const increaseCount = () => {
-    setCount(count ++);
-  }
+  const removeHandler = () => {
+    setIsRemoved(!isRemoved);
+  };
 
   useEffect(() => {
     loadData();
@@ -51,12 +53,14 @@ function App() {
     if (!vault.includes(name)) {
       setVault((prev_vault) => [...prev_vault, name]);
       setCount(count + 1);
+      setIsReset(false);
     }
   };
 
   const removeFromVault = (name) => {
     setVault((prev_vault) => prev_vault.filter((item) => item !== name));
     setCount(count - 1);
+    removeHandler();
   };
 
   const handleSelectedContinent = (continent) => {
@@ -87,10 +91,13 @@ function App() {
       );
       const itemList = continentData.map((item, index) => (
         <TravelItem
-          key={index}
+          key={item.id}
           item={item}
           index={index}
           addToVault={addToVault}
+          removeFromVault={removeFromVault}
+          isReset={isReset}
+          inVault={vault.includes(item.name)}
         />
       ));
       return itemList;
@@ -102,10 +109,13 @@ function App() {
       );
       const itemList = activityData.map((item, index) => (
         <TravelItem
-          key={index}
+          key={item.id}
           item={item}
           index={index}
           addToVault={addToVault}
+          removeFromVault={removeFromVault}
+          isReset={isReset}
+          inVault={vault.includes(item.name)}
         />
       ));
       return itemList;
@@ -120,10 +130,13 @@ function App() {
       );
       const itemList = mixedData.map((item, index) => (
         <TravelItem
-          key={index}
+          key={item.id}
           item={item}
           index={index}
           addToVault={addToVault}
+          removeFromVault={removeFromVault}
+          isReset={isReset}
+          inVault={vault.includes(item.name)}
         />
       ));
       if (itemList.length === 0) {
@@ -134,11 +147,13 @@ function App() {
     else {
       const itemList = travelData.map((item, index) => (
         <TravelItem
-          key={index}
+          key={item.id}
           item={item}
           index={index}
           addToVault={addToVault}
           removeFromVault={removeFromVault}
+          isReset={isReset}
+          inVault={vault.includes(item.name)}
         />
       ));
       return itemList;
@@ -165,6 +180,8 @@ function App() {
     setSelectedActivity("");
     setSelectedContinent("");
     setVault([]);
+    setCount(0);
+    setIsReset(true);
     setData(travelData);
     let unSortedData = data;
     unSortedData = travelData.sort((a, b) => a.id - b.id);
@@ -210,6 +227,7 @@ function App() {
                   key={data.classification}
                   activities={activities}
                   handleSelect={handleSelectedActivity}
+                  isReset={isReset}
                 />
                 <Reset handleSelect={resetPage} />
               </div>

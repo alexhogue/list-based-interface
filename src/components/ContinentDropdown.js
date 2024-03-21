@@ -1,7 +1,7 @@
 import React from "react";
 import "./Filtering.css";
 
-function ContinentDropdown({ continents, handleSelect }) {
+function ContinentDropdown({ continents, handleSelect, isReset }) {
   const handleChange = (e) => {
     const selectedContinent = e.target.value;
     handleSelect(selectedContinent);

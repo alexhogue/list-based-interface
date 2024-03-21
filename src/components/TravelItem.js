@@ -1,22 +1,40 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import Heart from "../assets/Heart.png";
 import HeartFilled from "../assets/heart-filled.png";
 import Comment from "../assets/Comment.png";
 import './TravelItem.css';
 
-function TravelItem({ item, addToVault, removeFromVault }) {
+function TravelItem({ item, addToVault, removeFromVault, isReset, inVault }) {
   const [isLiked, setIsLiked] = useState(false);
   const [isAdded, setIsAdded] = useState(false);
 
   const buttonText = isAdded ? "Remove" : "Add to Vault";
 
+  useEffect(() => {
+    if (isReset) {
+      setIsAdded(false);
+    }
+  }, [isReset])
+
+  useEffect(() => {
+    if (!inVault) {
+      setIsAdded(false);
+    }
+  }, [inVault]);
+
   const likeHander = () => {
     setIsLiked(!isLiked)
   }
 
-  const addHander = () => {
-    setIsAdded(!isAdded);
+  const addHandler = () => {
+    if (!isAdded) {
+      addToVault(item.name);
+      setIsAdded(true);
+    } else {
+      removeFromVault(item.name);
+      setIsAdded(false);
+    }
   };
 
   return (
@@ -33,13 +51,7 @@ function TravelItem({ item, addToVault, removeFromVault }) {
           <button
             id="vaultButton"
             onClick={(e) => {
-              if (!isAdded) {
-                addToVault(item.name);
-                addHander();
-              } else {
-                removeFromVault(item.name);
-                addHander();
-              }
+              addHandler()
             }}
           >
             {buttonText}

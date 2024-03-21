@@ -5,12 +5,19 @@ import HeartFilled from "../assets/heart-filled.png";
 import Comment from "../assets/Comment.png";
 import './TravelItem.css';
 
-function TravelItem({ item, addToVault }) {
+function TravelItem({ item, addToVault, removeFromVault }) {
   const [isLiked, setIsLiked] = useState(false);
+  const [isAdded, setIsAdded] = useState(false);
+
+  const buttonText = isAdded ? "Remove" : "Add to Vault";
 
   const likeHander = () => {
     setIsLiked(!isLiked)
   }
+
+  const addHander = () => {
+    setIsAdded(!isAdded);
+  };
 
   return (
     <div className="ItemContainer">
@@ -26,10 +33,16 @@ function TravelItem({ item, addToVault }) {
           <button
             id="vaultButton"
             onClick={(e) => {
-              addToVault(item.name);
+              if (!isAdded) {
+                addToVault(item.name);
+                addHander();
+              } else {
+                removeFromVault(item.name);
+                addHander();
+              }
             }}
           >
-            Add to Vault
+            {buttonText}
           </button>
           <div id="socialSection">
             <img

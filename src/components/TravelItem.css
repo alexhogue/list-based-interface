@@ -23,13 +23,12 @@
     align-items: center;
 }
 #vaultButton{
-    max-height: 40px;
     min-height: 40px;
-    max-width: 125px;
-    min-width: 115px;
+    min-width: 125px;
     border-radius: 16px;
     background-color: #5D5D5D;
     color: white;
+    text-wrap: nowrap;
     border: none;
 }
 #vaultButton:hover{
@@ -42,16 +41,16 @@
     align-items: center;
 }
 #heart{
-    width: 17%;
+    width: 16%;
     height: fit-content;
     transition-duration: 0.3s;
 }
 #comment{
-    width: 15%;
+    width: 14%;
     height: fit-content;
 }
 .socialData{
-    font-size: 13px;
+    font-size: 12px;
 }
 
 @keyframes fadeKeyframe {

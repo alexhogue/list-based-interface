@@ -138,6 +138,7 @@ function App() {
           item={item}
           index={index}
           addToVault={addToVault}
+          removeFromVault={removeFromVault}
         />
       ));
       return itemList;

@@ -5,6 +5,11 @@ import "./Filtering.css";
 function ActivityDropdown({ activities, handleSelect, isReset }) {
   const [selectedActivity, setSelectedActivity] = useState("");
 
+  const handleChange = (e) => {
+    const selectedActivity = e.target.value;
+    handleSelect(selectedActivity);
+    setSelectedActivity(selectedActivity);
+  };
 
   useEffect(() => {
     if (isReset) {
@@ -12,11 +17,6 @@ function ActivityDropdown({ activities, handleSelect, isReset }) {
     }
   }, [isReset]);
   
-  const handleChange = (e) => {
-    const selectedActivity = e.target.value;
-    handleSelect(selectedActivity);
-    setSelectedActivity(selectedActivity);
-  };
 
   return (
     <div>

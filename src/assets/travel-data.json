@@ -107,7 +107,7 @@
     "classification": "city",
     "likes": 3.8,
     "comments": 786,
-    "image": "images/melissa.png"
+    "image": "images/new-york.png"
   },
   {
     "name": "Crete, Greece",
@@ -127,7 +127,7 @@
     "classification": "adventure",
     "likes": 3.7,
     "comments": 421,
-    "image": "images/nick.png"
+    "image": "images/grand_canyon.png"
   },
   {
     "name": "Iceland",

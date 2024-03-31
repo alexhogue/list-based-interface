@@ -44,6 +44,7 @@ function TravelItem({ item, addToVault, removeFromVault, isReset, inVault }) {
           <h3>
             <b>{item.name}</b>
           </h3>
+          <img id="destinationIll" alt={item.name} src={item.image} />
           <p>{item.continent}</p>
           <p id="description">{item.description}</p>
         </div>
@@ -51,7 +52,7 @@ function TravelItem({ item, addToVault, removeFromVault, isReset, inVault }) {
           <button
             id="vaultButton"
             onClick={(e) => {
-              addHandler()
+              addHandler();
             }}
           >
             {buttonText}

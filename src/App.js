@@ -64,10 +64,17 @@ function App() {
   };
 
   const handleSelectedContinent = (continent) => {
+    if (isReset) {
+      console.log("reset")
+      setSelectedContinent("");
+    }
     setSelectedContinent(continent);
   };
 
   const handleSelectedActivity = (activity) => {
+    if (isReset) {
+      setSelectedActivity("");
+    }
     setSelectedActivity(activity);
   }
 

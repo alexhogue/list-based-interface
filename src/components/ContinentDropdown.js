@@ -6,15 +6,16 @@ function ContinentDropdown({ continents, handleSelect, isReset }) {
     const selectedContinent = e.target.value;
     handleSelect(selectedContinent);
   };
+  
 
   return (
     <div>
-      <select onChange={handleChange}>
+      <select onChange={handleChange} value={isReset ? "" : undefined}>
         <option value="">All Continents</option>
         {continents.map((continent) => (
-        <option key={continent} value={continent}>
-          {continent}
-        </option>
+          <option key={continent} value={continent}>
+            {continent}
+          </option>
         ))}
       </select>
     </div>

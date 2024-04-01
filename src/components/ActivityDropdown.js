@@ -20,7 +20,7 @@ function ActivityDropdown({ activities, handleSelect, isReset }) {
 
   return (
     <div>
-      <select onChange={handleChange}>
+      <select onChange={handleChange} value={isReset ? "" : undefined}>
         <option value="">All Activities</option>
         {activities.map((classification) => (
           <option key={classification} value={classification}>

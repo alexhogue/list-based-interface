@@ -64,17 +64,12 @@ function App() {
   };
 
   const handleSelectedContinent = (continent) => {
-    if (isReset) {
-      console.log("reset")
-      setSelectedContinent("");
-    }
+    setIsReset(false)
     setSelectedContinent(continent);
   };
 
   const handleSelectedActivity = (activity) => {
-    if (isReset) {
-      setSelectedActivity("");
-    }
+    setIsReset(false);
     setSelectedActivity(activity);
   }
 
@@ -188,12 +183,13 @@ function App() {
     setSelectedContinent("");
     setVault([]);
     setCount(0);
-    setIsReset(true);
     setData(travelData);
     let unSortedData = data;
     unSortedData = travelData.sort((a, b) => a.id - b.id);
+    setIsReset(true);
   };
 
+  console.log(isReset);
 
   return (
     <div className="App">
@@ -229,6 +225,7 @@ function App() {
                   key={data.continent}
                   continents={continents}
                   handleSelect={handleSelectedContinent}
+                  isReset={isReset}
                 />
                 <ActivityDropdown
                   key={data.classification}

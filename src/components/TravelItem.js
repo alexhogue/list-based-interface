@@ -37,6 +37,8 @@ function TravelItem({ item, addToVault, removeFromVault, isReset, inVault }) {
     }
   };
 
+  console.log(item.image);
+
   return (
     <div className="ItemContainer">
       <div className="TravelItem">
@@ -44,7 +46,11 @@ function TravelItem({ item, addToVault, removeFromVault, isReset, inVault }) {
           <h3>
             <b>{item.name}</b>
           </h3>
-          <img id="destinationIll" alt={item.name} src={item.image} />
+          <img
+            id="destinationIll"
+            alt={item.name}
+            src={process.env.PUBLIC_URL + "/" + item.image}
+          />
           <p>{item.continent}</p>
           <p id="description">{item.description}</p>
         </div>

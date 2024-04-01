@@ -7,7 +7,7 @@
     "classification": "city",
     "likes": 3.8,
     "comments": 783,
-    "image": "images/anika.png"
+    "image": "images/paris.png"
   },
   {
     "name": "Toyko, Japan",
@@ -17,7 +17,7 @@
     "classification": "city",
     "likes": 4.7,
     "comments": 675,
-    "image": "images/aubrey.png"
+    "image": "images/tokyo.png"
   },
   {
     "name": "Oaxaca, Mexico",
@@ -27,7 +27,7 @@
     "classification": "beach",
     "likes": 4.2,
     "comments": 401,
-    "image": "images/connie.png"
+    "image": "images/oaxaca.png"
   },
   {
     "name": "Florence, Italy",
@@ -37,7 +37,7 @@
     "classification": "city",
     "likes": 4.4,
     "comments": 297,
-    "image": "images/dylan.png"
+    "image": "images/florence.png"
   },
   {
     "name": "Kruger National Park, South Africa",
@@ -47,7 +47,7 @@
     "classification": "adventure",
     "likes": 4.1,
     "comments": 102,
-    "image": "images/isaac.png"
+    "image": "images/kruger.png"
   },
   {
     "name": "London, England",
@@ -57,7 +57,7 @@
     "classification": "city",
     "likes": 4.3,
     "comments": 983,
-    "image": "images/jeff.png"
+    "image": "images/london.png"
   },
   {
     "name": "Sydney, Australia",
@@ -67,7 +67,7 @@
     "classification": "city & beach",
     "likes": 4.3,
     "comments": 412,
-    "image": "images/jenny.png"
+    "image": "images/sydney.png"
   },
   {
     "name": "Phuket, Thailand",
@@ -77,7 +77,7 @@
     "classification": "beach & adventure",
     "likes": 4.1,
     "comments": 176,
-    "image": "images/jessie.png"
+    "image": "images/phuket.png"
   },
   {
     "name": "Rio de Janeiro, Brazil",
@@ -87,7 +87,7 @@
     "classification": "city & beach",
     "likes": 4.0,
     "comments": 398,
-    "image": "images/kelly.png"
+    "image": "images/rio.png"
   },
   {
     "name": "Marrakech, Morocco",
@@ -97,7 +97,7 @@
     "classification": "city",
     "likes": 3.8,
     "comments": 274,
-    "image": "images/lauren.png"
+    "image": "images/marrakech.png"
   },
   {
     "name": "New York City, USA",
@@ -107,7 +107,7 @@
     "classification": "city",
     "likes": 3.8,
     "comments": 786,
-    "image": "images/new-york.png"
+    "image": "images/new_york.png"
   },
   {
     "name": "Crete, Greece",
@@ -117,7 +117,7 @@
     "classification": "beach",
     "likes": 3.6,
     "comments": 123,
-    "image": "images/miku.png"
+    "image": "images/crete.png"
   },
   {
     "name": "Grand Canyon, USA",
@@ -137,7 +137,7 @@
     "classification": "adventure",
     "likes": 4.4,
     "comments": 340,
-    "image": "images/sunny.png"
+    "image": "images/iceland.png"
   },
   {
     "name": "Machu Picchu, Peru",
@@ -147,6 +147,6 @@
     "classification": "adventure",
     "likes": 4.5,
     "comments": 132,
-    "image": "images/tongyu.png"
+    "image": "images/machu_picchu.png"
   }
 ]

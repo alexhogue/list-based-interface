@@ -5,17 +5,11 @@ import HeartFilled from "../assets/heart-filled.png";
 import Comment from "../assets/Comment.png";
 import './TravelItem.css';
 
-function TravelItem({ item, addToVault, removeFromVault, isReset, inVault }) {
+function TravelItem({ item, addToVault, removeFromVault, inVault }) {
   const [isLiked, setIsLiked] = useState(false);
   const [isAdded, setIsAdded] = useState(false);
 
   const buttonText = isAdded ? "Remove" : "Add to Vault";
-
-  useEffect(() => {
-    if (isReset) {
-      setIsAdded(false);
-    }
-  }, [isReset])
 
   useEffect(() => {
     if (!inVault) {
@@ -37,20 +31,18 @@ function TravelItem({ item, addToVault, removeFromVault, isReset, inVault }) {
     }
   };
 
-  console.log(item.image);
-
   return (
     <div className="ItemContainer">
       <div className="TravelItem">
         <div id="tripText">
-          <h3>
-            <b>{item.name}</b>
-          </h3>
           <img
             id="destinationIll"
             alt={item.name}
             src={process.env.PUBLIC_URL + "/" + item.image}
           />
+          <h3>
+            <b>{item.name}</b>
+          </h3>
           <p>{item.continent}</p>
           <p id="description">{item.description}</p>
         </div>

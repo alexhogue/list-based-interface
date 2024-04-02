@@ -1,9 +1,15 @@
 
-
 .ItemContainer{
-  background-color: #F6F6F6;
+  /* background-color: white; */
+  border-color: #5D5D5D;
+  /* border-style: dotted; */
   margin-bottom: 3%;
   border-radius: 25px;
+}
+.ItemContainer:hover{
+  box-shadow:inset 0px 0px 0px 1px #d1d1d1;
+  background-color: #f5f5f5a7;
+  transition: 0.3s;
 }
 
 .TravelItem {
@@ -15,7 +21,7 @@
 }
 #destinationIll{
   width: 100%;
-  /* max-width: 250px; */
+  border-radius: 15px;
   height: fit-content;
 }
 #description{
@@ -30,7 +36,7 @@
 #vaultButton{
     min-height: 40px;
     min-width: 125px;
-    border-radius: 16px;
+    border-radius: 14px;
     background-color: #5D5D5D;
     color: white;
     text-wrap: nowrap;

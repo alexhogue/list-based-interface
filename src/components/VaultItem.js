@@ -1,6 +1,5 @@
 import React from "react";
 import x from "../assets/xButton.png";
-import { useState } from "react";
 import "./VaultItem.css";
 
 function VaultItem({ name, index, removeFromVault }) {
@@ -9,9 +8,13 @@ function VaultItem({ name, index, removeFromVault }) {
     <div className="vaultItemContainer">
       <div className="vaultItem">
         <div id="savedText">
-          <h3 key={index}>
-            <b>{name}</b>
-          </h3>
+          <ul>
+            <li>
+              <h3 key={index}>
+                <b>{name}</b>
+              </h3>
+            </li>
+          </ul>
         </div>
         <img
           id="x"
@@ -19,7 +22,6 @@ function VaultItem({ name, index, removeFromVault }) {
           src={x}
           onClick={(e) => {
             removeFromVault(name);
-
           }}
         />
       </div>

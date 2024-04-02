@@ -98,7 +98,7 @@ function App() {
           index={index}
           addToVault={addToVault}
           removeFromVault={removeFromVault}
-          isReset={isReset}
+          // isReset={isReset}
           inVault={vault.includes(item.name)}
         />
       ));
@@ -116,7 +116,7 @@ function App() {
           index={index}
           addToVault={addToVault}
           removeFromVault={removeFromVault}
-          isReset={isReset}
+          // isReset={isReset}
           inVault={vault.includes(item.name)}
         />
       ));
@@ -137,7 +137,7 @@ function App() {
           index={index}
           addToVault={addToVault}
           removeFromVault={removeFromVault}
-          isReset={isReset}
+          // isReset={isReset}
           inVault={vault.includes(item.name)}
         />
       ));
@@ -154,7 +154,7 @@ function App() {
           index={index}
           addToVault={addToVault}
           removeFromVault={removeFromVault}
-          isReset={isReset}
+          // isReset={isReset}
           inVault={vault.includes(item.name)}
         />
       ));
@@ -165,7 +165,7 @@ function App() {
 
   const displayVault = () => {
     if (vault.length === 0) {
-      return <p id="emptyText">Vault is currently empty</p>;
+      return <p id="emptyText">Your vault is currently empty</p>;
     } else {
       const itemList = vault.map((name) => (
           <VaultItem
@@ -181,8 +181,8 @@ function App() {
   const resetPage = () => {
     setSelectedActivity("");
     setSelectedContinent("");
-    setVault([]);
-    setCount(0);
+    // setVault([]);
+    // setCount(0);
     setData(travelData);
     let unSortedData = data;
     unSortedData = travelData.sort((a, b) => a.id - b.id);
@@ -201,7 +201,11 @@ function App() {
           <div className="vault">
             <h2 id="vaultHeader">My Vault</h2>
             <p id="countUpdater">
-              {count > 0 ? (
+              {count === 1 ? (
+                <p>
+                  <b>{count}</b> voyage in your vault!
+                </p>
+              ) : count > 1 ? (
                 <p>
                   <b>{count}</b> voyages in your vault!
                 </p>
@@ -233,8 +237,10 @@ function App() {
                   handleSelect={handleSelectedActivity}
                   isReset={isReset}
                 />
-                <Reset handleSelect={resetPage} />
               </div>
+            </div>
+            <div id="reset">
+              <Reset handleSelect={resetPage} />
             </div>
           </div>
           <div className="destinationList">{buildElements()}</div>

@@ -10,24 +10,24 @@
     "image": "images/paris.png"
   },
   {
-    "name": "Toyko, Japan",
+    "name": "Grand Canyon, USA",
     "id": 1,
+    "description": "Majestic cliffs, winding trails, and breathtaking vistas",
+    "continent": "North America",
+    "classification": "adventure",
+    "likes": 3.7,
+    "comments": 421,
+    "image": "images/grand_canyon.png"
+  },
+  {
+    "name": "Toyko, Japan",
+    "id": 2,
     "description": "Bustling city, vibrant nightlife, and innovative technology",
     "continent": "Asia",
     "classification": "city",
     "likes": 4.7,
     "comments": 675,
     "image": "images/tokyo.png"
-  },
-  {
-    "name": "Oaxaca, Mexico",
-    "id": 2,
-    "description": "Rich cultural heritage, traditional cuisine, and colorful markets",
-    "continent": "North America",
-    "classification": "beach",
-    "likes": 4.2,
-    "comments": 401,
-    "image": "images/oaxaca.png"
   },
   {
     "name": "Florence, Italy",
@@ -120,14 +120,14 @@
     "image": "images/crete.png"
   },
   {
-    "name": "Grand Canyon, USA",
+    "name": "Oaxaca, Mexico",
     "id": 12,
-    "description": "Majestic cliffs, winding trails, and breathtaking vistas",
+    "description": "Rich cultural heritage, traditional cuisine, and colorful markets",
     "continent": "North America",
-    "classification": "adventure",
-    "likes": 3.7,
-    "comments": 421,
-    "image": "images/grand_canyon.png"
+    "classification": "beach",
+    "likes": 4.2,
+    "comments": 401,
+    "image": "images/oaxaca.png"
   },
   {
     "name": "Iceland",

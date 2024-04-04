@@ -19,7 +19,6 @@ function App() {
   const [isSorted, setIsSorted] = useState(false);
   const [isRemoved, setIsRemoved] = useState(false);
   const [isReset, setIsReset] = useState(false);
-  
 
   const loadData = () => {
     setData(travelData);
@@ -36,19 +35,25 @@ function App() {
   useEffect(() => {
     // Extract unique continents from travel data
     const uniqueContinents = [
-      ...new Set(travelData.map((item) => item.continent))
+      ...new Set(travelData.map((item) => item.continent)),
     ];
     setContinents(uniqueContinents);
   }, []);
 
   useEffect(() => {
-    // Extract unique continents from travel data
+    // Extract unique activity classification from travel data
     const activity = [
       ...new Set(travelData.map((item) => item.classification)),
     ];
     setActivities(activity);
   }, []);
 
+
+  /**
+   * Adds items to a list to store what items the user has added from the grid,
+   * updates the item count 
+   * @param {*} name the name of the item stored in vault
+   */
   const addToVault = (name) => {
     if (!vault.includes(name)) {
       setVault((prev_vault) => [...prev_vault, name]);
@@ -57,6 +62,10 @@ function App() {
     }
   };
 
+  /**
+   * Removes items from the vault list, updates the item count
+   * @param {*} name - the name of the item stored in the list
+   */
   const removeFromVault = (name) => {
     setVault((prev_vault) => prev_vault.filter((item) => item !== name));
     setCount(count - 1);
@@ -64,28 +73,32 @@ function App() {
   };
 
   const handleSelectedContinent = (continent) => {
-    setIsReset(false)
+    setIsReset(false);
     setSelectedContinent(continent);
   };
 
   const handleSelectedActivity = (activity) => {
     setIsReset(false);
     setSelectedActivity(activity);
-  }
+  };
 
   const sortHandler = () => {
-    setIsSorted(true)
-  }
+    setIsSorted(true);
+  };
 
-  useEffect(() => {
-  }, [isSorted]);
+  useEffect(() => {}, [isSorted]);
 
+  /**
+   * Builds the grid of item cards using a map depending on how the items are filtered or sorted
+   * @returns an itemlist of TravelItems as item cards
+   */
   const buildElements = () => {
     let sortedData = data;
     if (isSorted) {
-      const sortedData = travelData.sort((a,b) => b.likes - a.likes);
+      const sortedData = travelData.sort((a, b) => b.likes - a.likes);
       setIsSorted(false);
     }
+    // when a continent filter is selected
     let continentData = data;
     if (selectedContinent && !selectedActivity) {
       const continentData = travelData.filter(
@@ -98,12 +111,12 @@ function App() {
           index={index}
           addToVault={addToVault}
           removeFromVault={removeFromVault}
-          // isReset={isReset}
           inVault={vault.includes(item.name)}
         />
       ));
       return itemList;
-    } 
+    }
+    // when an activity filter is selected
     let activityData = data;
     if (selectedActivity && !selectedContinent) {
       const activityData = travelData.filter(
@@ -116,12 +129,12 @@ function App() {
           index={index}
           addToVault={addToVault}
           removeFromVault={removeFromVault}
-          // isReset={isReset}
           inVault={vault.includes(item.name)}
         />
       ));
       return itemList;
-    } 
+    }
+    // when both filters are selected
     let mixedData = continentData;
     if (selectedContinent && selectedActivity) {
       const continentData = travelData.filter(
@@ -137,16 +150,15 @@ function App() {
           index={index}
           addToVault={addToVault}
           removeFromVault={removeFromVault}
-          // isReset={isReset}
           inVault={vault.includes(item.name)}
         />
       ));
       if (itemList.length === 0) {
-        return <p>Filters do not match any travel options</p>
+        return <p>Filters do not match any travel options</p>;
       }
       return itemList;
-    }
-    else {
+    } else {
+      // default grid
       const itemList = travelData.map((item, index) => (
         <TravelItem
           key={item.id}
@@ -154,7 +166,6 @@ function App() {
           index={index}
           addToVault={addToVault}
           removeFromVault={removeFromVault}
-          // isReset={isReset}
           inVault={vault.includes(item.name)}
         />
       ));
@@ -162,34 +173,33 @@ function App() {
     }
   };
 
-
+  /**
+   * updates and displays the items in the aggregator using a map of the names in the
+   * vault list to a corresponding VaultItem
+   * @returns a list of VaultItems 
+   */
   const displayVault = () => {
     if (vault.length === 0) {
       return <p id="emptyText">Your vault is currently empty</p>;
     } else {
       const itemList = vault.map((name) => (
-          <VaultItem
-            key={name}
-            name={name}
-            removeFromVault={removeFromVault}
-          />
+        <VaultItem key={name} name={name} removeFromVault={removeFromVault} />
       ));
       return itemList;
     }
   };
 
+  /**
+   * resets the item grid to the default settings when the reset button is clicked
+   */
   const resetPage = () => {
     setSelectedActivity("");
     setSelectedContinent("");
-    // setVault([]);
-    // setCount(0);
     setData(travelData);
     let unSortedData = data;
     unSortedData = travelData.sort((a, b) => a.id - b.id);
     setIsReset(true);
   };
-
-  console.log(isReset);
 
   return (
     <div className="App">

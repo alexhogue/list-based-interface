@@ -2,6 +2,11 @@ import React from "react";
 import x from "../assets/xButton.png";
 import "./VaultItem.css";
 
+/**
+ * Creates a vault item, which is added to the aggregator when a user clicks on an item 
+ * in the item grid.
+ * @returns a vault item
+ */
 function VaultItem({ name, index, removeFromVault }) {
 
   return (

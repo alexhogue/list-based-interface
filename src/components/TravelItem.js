@@ -5,10 +5,15 @@ import HeartFilled from "../assets/heart-filled.png";
 import Comment from "../assets/Comment.png";
 import './TravelItem.css';
 
+/**
+ * Creates a travel item card that is displayed on the main grid for each entry in the travel data
+ * @returns a TravelItem
+ */
 function TravelItem({ item, addToVault, removeFromVault, inVault }) {
   const [isLiked, setIsLiked] = useState(false);
   const [isAdded, setIsAdded] = useState(false);
 
+  // button text changes to remove if item has been added to the aggregator
   const buttonText = isAdded ? "Remove" : "Add to Vault";
 
   useEffect(() => {
@@ -37,7 +42,7 @@ function TravelItem({ item, addToVault, removeFromVault, inVault }) {
         <div id="tripText">
           <img
             id="destinationIll"
-            alt={item.name}
+            alt={item.name + " illustration"}
             src={process.env.PUBLIC_URL + "/" + item.image}
           />
           <h3>

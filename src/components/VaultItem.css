@@ -1,14 +1,12 @@
 .vaultItemContainer{
-    /* background-color: white; */
     border-radius: 20px;
     margin-bottom: 2%;
-    /* border-style: dotted;
-    border-color:#5D5D5D; */
+    background-color: rgba(255, 255, 255, 0.868);
 }
 
 .vaultItemContainer:hover{
     box-shadow:inset 0px 0px 0px 1px #d1d1d1;
-    background-color: #f5f5f5a7;
+    background-color: #f7f7f7;
     transition: 0.3s;
 }
 

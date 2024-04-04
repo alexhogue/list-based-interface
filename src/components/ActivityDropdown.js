@@ -2,6 +2,10 @@ import React from "react";
 import { useEffect, useState } from "react";
 import "./Filtering.css";
 
+/**
+ * Creates a dropdown to filter the page by activity when selected. 
+ * @returns an activity dropdown
+ */
 function ActivityDropdown({ activities, handleSelect, isReset }) {
   const [selectedActivity, setSelectedActivity] = useState("");
 
